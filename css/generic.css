@@ -124,7 +124,7 @@ header .menu nav {
     padding: 10px;
     padding-top: 70px;
     animation: slide;
-    animation-duration: 1.8s;
+    animation-duration: .3s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-play-state: paused;
