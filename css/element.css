@@ -1,290 +1,271 @@
 /* Start Variables */
 :root {
-    --text-Color: rgb(255, 255, 255, 0.5);
-    --back-Color: #ce1b28;
-    --main-padding: 60px;
+  --text-Color: rgb(255, 255, 255, 0.5);
+  --back-Color: #ce1b28;
+  --main-padding: 60px;
 }
 
 /* End Variables */
 /* Start Global Rules */
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    color: #444444;
-
+  font-family: "Raleway", sans-serif;
+  color: #444444;
 }
 
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
 }
 
 /* Small */
 @media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
+  .container {
+    width: 750px;
+  }
 }
 
 /* Meduim */
 @media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
+  .container {
+    width: 970px;
+  }
 }
 
 /* Large */
 @media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
+  .container {
+    width: 1170px;
+  }
 }
 
 /* Mobile Only */
 @media (max-width: 767px) {
-    .container {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
+  .container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
 /* End Global Rules */
 /* Start Components */
 .main {
-    color: gray;
-    font-weight: normal;
-    font-size: 20px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+  color: gray;
+  font-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
-
 
 /* End Components */
 /* Start Body */
 body::before {
-    content: "";
-    background-image: url(../media/photos/bg.jpg);
-    opacity: 0.1;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  content: "";
+  background-image: url(../media/photos/bg.jpg);
+  opacity: 0.1;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
-
 
 /* End Body */
 /* Start Header */
 header {
-    background-color: #111111;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9;
-    padding: 20px 15px;
+  background-color: #111111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  padding: 20px 15px;
 }
 
 header h3 {
-    margin: 0;
-    padding-left: 5px;
-    font-weight: 600;
+  margin: 0;
+  padding-left: 5px;
+  font-weight: 600;
+}
+
+header .menu .btn {
+  position: relative;
+  z-index: 55;
+  user-select: none;
+  cursor: pointer;
 }
 
 header .menu i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
-
 header .menu {
-    padding-right: 5px;
-    color: var(--text-Color);
-    cursor: pointer;
+  padding-right: 5px;
+  color: var(--text-Color);
 }
 
 header .menu nav {
-    position: absolute;
-    top: 0px;
-    background-color: #111111;
-    padding: 10px;
-    padding-top: 70px;
-    animation: slide;
-    animation-duration: .3s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
-    display: none;
-    height: 100vh;
-    width: 50%;
+  position: absolute;
+  top: 0px;
+  background-color: #111111;
+  padding: 10px;
+  padding-top: 70px;
+  height: 100vh;
+  width: 50%;
+  transition: 0.5s;
 }
-
-@keyframes slide {
-    0% {
-        right: -50%;
-    }
-
-    100% {
-        right: 0%;
-    }
-}
-
-header .menu:hover nav {
-    display: block;
-    animation-play-state: running;
-}
-
 
 header .menu nav ul {
-    list-style: none;
+  list-style: none;
 }
 
 header .menu nav ul li {
-    padding: 12px;
-    text-align: left;
+  padding: 12px;
+  text-align: left;
 }
 
 header .menu nav ul li:not(:last-child) {
-    border-bottom: 2px solid var(--text-Color);
+  border-bottom: 2px solid var(--text-Color);
 }
 
 header .menu nav ul li a {
-    text-decoration: none;
-    color: var(--text-Color);
-    font-size: 15px;
-    transition: .3s;
+  text-decoration: none;
+  color: var(--text-Color);
+  font-size: 15px;
+  transition: 0.3s;
+  display: block;
+  width: 100%;
 }
 
 header .menu nav ul li:hover a {
-    color: white;
+  color: white;
 }
 
 @media (max-width: 767px) {
-    header {
-        padding: 10px;
-
-    }
+  header {
+    padding: 10px;
+  }
 }
 
 /* End Header */
 /* Start Section One  */
 .s-one {
-    background-image: url(../media/photos/banner.jpg);
-    background-size: cover;
-    position: relative;
-    top: 60px;
-    padding: 150px;
-    left: 0;
-    text-align: center;
+  background-image: url(../media/photos/banner.jpg);
+  background-size: cover;
+  position: relative;
+  top: 60px;
+  padding: 150px;
+  left: 0;
+  text-align: center;
 }
 
 .s-one::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-image: linear-gradient(130deg, red, black);
-    left: 0;
-    top: 0;
-    opacity: .5;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(130deg, red, black);
+  left: 0;
+  top: 0;
+  opacity: 0.5;
 }
 
 .s-one p {
-    color: white;
-    text-transform: uppercase;
-    font-size: 50px;
-    position: relative;
+  color: white;
+  text-transform: uppercase;
+  font-size: 50px;
+  position: relative;
 }
 
 @media (max-width: 767px) {
-    .s-one {
-        top: 40px;
-    }
+  .s-one {
+    top: 40px;
+  }
 
-    .s-one p {
-        font-size: 25px;
-    }
+  .s-one p {
+    font-size: 25px;
+  }
 }
 
 /* End Section One  */
 /* Start Section Two */
 .s-two {
-    padding-top: 120px;
+  padding-top: 120px;
 }
 
 .s-two .container {
-    padding-top: 35px;
-    padding-bottom: 35px;
-    background-color: white;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: white;
 }
 
 @media (min-width: 992px) {
-    .s-two .container {
-        display: flex;
-    }
+  .s-two .container {
+    display: flex;
+  }
 
-    .s-two .container .one,
-    .s-two .container .two {
-        width: 50%;
-    }
+  .s-two .container .one,
+  .s-two .container .two {
+    width: 50%;
+  }
 }
 
 .s-two .one {
-    padding: 0 20px;
+  padding: 0 20px;
 }
 
 /* Start Text */
 .s-two .container .text {
-    color: #555555;
+  color: #555555;
 }
 
 .s-two .container .text p {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .s-two .container .text p a {
-    color: var(--back-Color);
+  color: var(--back-Color);
 }
 
 .s-two .container .text p code {
-    padding: 2px;
-    background-color: gainsboro;
-    width: 50px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 4px;
-    border: 1px solid #b5b4b4;
+  padding: 2px;
+  background-color: gainsboro;
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #b5b4b4;
 }
 
 .s-two .container .text p a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-
 .s-two .container .heading {
-    padding-top: 30px;
-    color: gray;
+  padding-top: 30px;
+  color: gray;
 }
 
 .s-two .container .heading h2,
@@ -292,157 +273,150 @@ header .menu nav ul li:hover a {
 .s-two .container .heading h4,
 .s-two .container .heading h5,
 .s-two .container .heading h6 {
-    font-weight: normal;
-    padding-bottom: 10px;
+  font-weight: normal;
+  padding-bottom: 10px;
 }
 
 .s-two .container .heading p {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* End Text */
 /* Start List */
 .s-two .container .list {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
-
 .s-two .container .list .boxs {
-    display: flex;
-    padding-bottom: 30px;
+  display: flex;
+  padding-bottom: 30px;
 }
 
 .s-two .container .list .box {
-    width: 50%;
-    padding-right: 60px;
+  width: 50%;
+  padding-right: 60px;
 }
 
 @media (max-width: 767px) {
-    .s-two .container .list .boxs {
-        flex-direction: column;
-    }
+  .s-two .container .list .boxs {
+    flex-direction: column;
+  }
 
-    .s-two .container .list .box {
-        width: 100%;
-    }
+  .s-two .container .list .box {
+    width: 100%;
+  }
 }
 
 .s-two .container .list .box h3 {
-    text-transform: uppercase;
-    font-weight: normal;
-    color: gray;
-    margin-bottom: 15px;
-    margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: gray;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .s-two .container .list .box .bullets {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .s-two .container .list .box .bullets,
 .s-two .container .list .box ol {
-    margin-left: 18px;
+  margin-left: 18px;
 }
 
 .s-two .container .list .box .bullets li,
 .s-two .container .list .box ol li {
-    line-height: 1.6;
-    font-size: 16px;
+  line-height: 1.6;
+  font-size: 16px;
 }
-
 
 .s-two .container .list .box .border {
-    list-style: none;
+  list-style: none;
 }
 
-
 .s-two .container .list .box .border li {
-    padding-bottom: 15px;
-    padding-top: 15px;
-    font-size: 18px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 18px;
 }
 
 .s-two .container .list .box .border li:not(:last-child) {
-    border-bottom: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
 
-@media (max-width:767px) {
-
-    .s-two .container .list .box .border li,
-    .s-two .container .list .box .bullets li,
-    .s-two .container .list .box ol li {
-        font-size: 14px;
-    }
+@media (max-width: 767px) {
+  .s-two .container .list .box .border li,
+  .s-two .container .list .box .bullets li,
+  .s-two .container .list .box ol li {
+    font-size: 14px;
+  }
 }
 
 /* End List */
 /* Start Definition */
 .s-two .container .definition {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .s-two .container .definition dt {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .s-two .container .definition dd {
-    padding-top: 10px;
-    padding-left: 25px;
-    line-height: 1.5;
-    padding-bottom: 30px;
+  padding-top: 10px;
+  padding-left: 25px;
+  line-height: 1.5;
+  padding-bottom: 30px;
 }
-
 
 /* End Definition */
 /* Start Icons */
 
 .s-two .container .icons ul {
-    list-style: none;
-    font-size: 30px;
-    display: flex;
-    flex-wrap: wrap;
+  list-style: none;
+  font-size: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .s-two .container .icons ul li {
-    padding-right: 20px;
-    padding-bottom: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
 }
 
 .s-two .container .icons ul li a {
-    color: var(--back-Color);
+  color: var(--back-Color);
 }
 
 /* End Icons */
 /* Start Actions */
 .s-two .container .action {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 .s-two .container .action .boxs {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
-
 
 .s-two .container .action .boxs a {
-    text-decoration: none;
-
+  text-decoration: none;
 }
 
-.s-two .container .action .boxs .right>div {
-    display: flex;
+.s-two .container .action .boxs .right > div {
+  display: flex;
 }
 
 .s-two .container .action .boxs .right .def a {
-    display: block;
-    width: 5rem;
-    background-color: var(--back-Color);
-    height: 3rem;
-    text-align: center;
-    line-height: 3;
-    color: white;
-    border-radius: 7px;
-    margin: 0 15px 20px 0;
+  display: block;
+  width: 5rem;
+  background-color: var(--back-Color);
+  height: 3rem;
+  text-align: center;
+  line-height: 3;
+  color: white;
+  border-radius: 7px;
+  margin: 0 15px 20px 0;
 }
 
 .s-two .container .action .boxs .right .def a:last-child,
@@ -451,830 +425,814 @@ header .menu nav ul li:hover a {
 .s-two .container .action .boxs .right .two .smacul a:last-child,
 .s-two .container .action .boxs .left .default a:last-child,
 .s-two .container .action .boxs .left .small a:last-child {
-    color: gray;
-    background-color: white;
-    border: 1px solid;
+  color: gray;
+  background-color: white;
+  border: 1px solid;
 }
-
 
 .s-two .container .action .boxs .right .sma a,
 .s-two .container .action .boxs .right .two .smacul a {
-    display: block;
-    background-color: var(--back-Color);
-    color: white;
-    width: 4rem;
-    height: 2rem;
-    margin: 0 10px 15px 0;
-    text-align: center;
-    border-radius: 7px;
-    line-height: 2;
+  display: block;
+  background-color: var(--back-Color);
+  color: white;
+  width: 4rem;
+  height: 2rem;
+  margin: 0 10px 15px 0;
+  text-align: center;
+  border-radius: 7px;
+  line-height: 2;
 }
 
-
 .s-two .container .action .boxs .right .two .defcul a {
-    display: block;
-    width: 5rem;
-    background-color: var(--back-Color);
-    height: 3rem;
-    text-align: center;
-    line-height: 3;
-    color: white;
-    border-radius: 7px;
-    margin: 0 80px 20px 0;
+  display: block;
+  width: 5rem;
+  background-color: var(--back-Color);
+  height: 3rem;
+  text-align: center;
+  line-height: 3;
+  color: white;
+  border-radius: 7px;
+  margin: 0 80px 20px 0;
 }
 
 .s-two .container .action .boxs .right .two .smacul {
-    margin-right: 55px;
+  margin-right: 55px;
 }
 
 .s-two .container .action .boxs .left {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .s-two .container .action .boxs .left .small {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .s-two .container .action .boxs .left .default a,
 .s-two .container .action .boxs .left .small a {
-    display: block;
-    width: 10rem;
-    background-color: var(--back-Color);
-    height: 3rem;
-    text-align: center;
-    line-height: 3;
-    color: white;
-    border-radius: 7px;
-    margin: 0 15px 20px 0;
+  display: block;
+  width: 10rem;
+  background-color: var(--back-Color);
+  height: 3rem;
+  text-align: center;
+  line-height: 3;
+  color: white;
+  border-radius: 7px;
+  margin: 0 15px 20px 0;
 }
 
-
-
 .s-two .container .action .boxs .left .small a {
-    height: 2rem;
-    line-height: 2;
+  height: 2rem;
+  line-height: 2;
 }
 
 .s-two .container .action .boxs .right a.save:hover,
 .s-two .container .action .boxs .right .two a.save:hover,
 .s-two .container .action .boxs .left a.save:hover {
-    color: var(--back-Color);
-    border-color: var(--back-Color);
+  color: var(--back-Color);
+  border-color: var(--back-Color);
 }
 
 .s-two .container .action .boxs .right a.red:hover,
 .s-two .container .action .boxs .right .two a.red:hover,
 .s-two .container .action .boxs .left a.red:hover {
-    background-color: red;
+  background-color: red;
 }
 
 @media (min-width: 992px) {
-
-    .s-two .container .action .boxs .left .default a,
-    .s-two .container .action .boxs .left .small a {
-        width: 5rem;
-    }
+  .s-two .container .action .boxs .left .default a,
+  .s-two .container .action .boxs .left .small a {
+    width: 5rem;
+  }
 }
 
 @media (max-width: 767px) {
+  .s-two .container .action .boxs,
+  .s-two .container .action .boxs .right > div,
+  .s-two .container .action .boxs .left {
+    flex-direction: column;
+  }
 
-    .s-two .container .action .boxs,
-    .s-two .container .action .boxs .right>div,
-    .s-two .container .action .boxs .left {
-        flex-direction: column;
-    }
+  .s-two .container .action .boxs div a,
+  .s-two .container .action .boxs .right .two .smacul {
+    margin: 0 0 10px 0 !important;
+    width: 270px !important;
+  }
 
-    .s-two .container .action .boxs div a,
-    .s-two .container .action .boxs .right .two .smacul {
-        margin: 0 0 10px 0 !important;
-        width: 270px !important;
-    }
+  .s-two .container .action .boxs .right div,
+  .s-two .container .action .boxs .left .default {
+    margin-bottom: 25px;
+  }
 
-    .s-two .container .action .boxs .right div,
-    .s-two .container .action .boxs .left .default {
-        margin-bottom: 25px;
-    }
-
-    .s-two .container .action .boxs .left {
-        align-items: flex-start;
-    }
+  .s-two .container .action .boxs .left {
+    align-items: flex-start;
+  }
 }
 
 /* End Actions */
 /* Start Blockquote */
 .s-two .container .quote {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .s-two .container .quote blockquote {
-    font-style: italic;
-    font-size: 15px;
-    line-height: 1.5;
-    position: relative;
-    padding: 20px 0 20px 60px;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  position: relative;
+  padding: 20px 0 20px 60px;
 }
 
 .s-two .container .quote blockquote::before {
-    content: "";
-    width: 10px;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: #555555;
+  content: "";
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #555555;
 }
 
 /* End Blockquote */
 /* Start Table */
 
 .s-two .container .table {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .s-two .container table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin-bottom: 10px;
-    width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .s-two .container .table .head {
-    font-size: 20px;
-    font-weight: normal;
-    text-transform: uppercase;
-    padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
 .s-two .container .table .table-one {
-    margin: 0 0 60px 0;
+  margin: 0 0 60px 0;
 }
 
 .s-two .container .table .table-one thead tr {
-    border-bottom: 1px solid;
+  border-bottom: 1px solid;
 }
 
 .s-two .container .table .table-one thead th,
 .s-two .container .table .table-two thead th {
-    font-weight: 500;
-    text-align: left;
-    color: #555555;
-    padding: 15px;
+  font-weight: 500;
+  text-align: left;
+  color: #555555;
+  padding: 15px;
 }
 
 .s-two .container .table .table-one tbody tr {
-    border-bottom: 1px solid;
+  border-bottom: 1px solid;
 }
 
 .s-two .container .table .table-two tbody tr td {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 .s-two .container .table .table-one tbody td,
 .s-two .container .table .table-one tfoot td,
 .s-two .container .table .table-two tbody td,
 .s-two .container .table .table-two tfoot td {
-    padding: 15px;
+  padding: 15px;
 }
 
 @media (max-width: 767px) {
+  .s-two .container .table .table-one tbody td,
+  .s-two .container .table .table-one tfoot td,
+  .s-two .container .table .table-two tbody td,
+  .s-two .container .table .table-two tfoot td {
+    padding: 10px 11px 11px;
+  }
 
-    .s-two .container .table .table-one tbody td,
-    .s-two .container .table .table-one tfoot td,
-    .s-two .container .table .table-two tbody td,
-    .s-two .container .table .table-two tfoot td {
-        padding: 10px 11px 11px;
-    }
-
-    .s-two .container .table .table-one tbody tr {
-        height: 90px;
-    }
+  .s-two .container .table .table-one tbody tr {
+    height: 90px;
+  }
 }
 
 .s-two .container .table .table-one tbody tr:nth-child(2n + 1),
 .s-two .container .table .table-two tbody tr:nth-child(2n + 1) {
-    background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 /* End Table */
 /* Start Buttons */
-.s-two .container .button .but>div {
-    display: flex;
-    margin-bottom: 15px;
+.s-two .container .button .but > div {
+  display: flex;
+  margin-bottom: 15px;
 }
 
-.s-two .container .button .but>div a {
-    text-decoration: none;
+.s-two .container .button .but > div a {
+  text-decoration: none;
 }
 
 .s-two .container .button .but .zero a:first-child,
 .s-two .container .button .but .sex a:first-child {
-    width: 6rem;
-    display: block;
-    background-color: var(--back-Color);
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    height: 45px;
-    line-height: 2.8;
-    border-radius: 6px;
-    margin-right: 10px;
+  width: 6rem;
+  display: block;
+  background-color: var(--back-Color);
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  height: 45px;
+  line-height: 2.8;
+  border-radius: 6px;
+  margin-right: 10px;
 }
-
 
 .s-two .container .button .but .zero a:last-child,
 .s-two .container .button .but .two a:last-child,
 .s-two .container .button .but .sex a:last-child {
-    width: 6rem;
-    display: block;
-    background-color: white;
-    text-decoration: none;
-    color: gray;
-    text-align: center;
-    height: 45px;
-    line-height: 2.8;
-    border-radius: 6px;
-    border: 1px solid;
+  width: 6rem;
+  display: block;
+  background-color: white;
+  text-decoration: none;
+  color: gray;
+  text-align: center;
+  height: 45px;
+  line-height: 2.8;
+  border-radius: 6px;
+  border: 1px solid;
 }
 
 .s-two .container .button .but .two a:first-child {
-    width: 6.4rem;
-    display: block;
-    background-color: var(--back-Color);
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    height: 55px;
-    line-height: 3.4;
-    border-radius: 6px;
-    margin-right: 10px;
+  width: 6.4rem;
+  display: block;
+  background-color: var(--back-Color);
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  height: 55px;
+  line-height: 3.4;
+  border-radius: 6px;
+  margin-right: 10px;
 }
 
 .s-two .container .button .but .three a:first-child {
-    width: 4rem;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    height: 35px;
-    line-height: 2.1;
-    border-radius: 6px;
-    margin-right: 10px;
-    color: gray;
-    background-color: white;
-    border: 1px solid;
+  width: 4rem;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  height: 35px;
+  line-height: 2.1;
+  border-radius: 6px;
+  margin-right: 10px;
+  color: gray;
+  background-color: white;
+  border: 1px solid;
 }
 
 .s-two .container .button .but .three a:last-child {
-    width: 10rem;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    height: 45px;
-    line-height: 2.8;
-    border-radius: 6px;
-    color: gray;
-    background-color: white;
-    border: 1px solid;
+  width: 10rem;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  height: 45px;
+  line-height: 2.8;
+  border-radius: 6px;
+  color: gray;
+  background-color: white;
+  border: 1px solid;
 }
-
 
 .s-two .container .button .but .four a,
 .s-two .container .button .but .five a {
-    width: 50%;
-    display: block;
-    background-color: var(--back-Color);
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    height: 45px;
-    line-height: 2.8;
-    border-radius: 6px;
-    margin-right: 10px;
+  width: 50%;
+  display: block;
+  background-color: var(--back-Color);
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  height: 45px;
+  line-height: 2.8;
+  border-radius: 6px;
+  margin-right: 10px;
 }
 
 .s-two .container .button .but .four a:last-child,
 .s-two .container .button .but .five a:last-child {
-    background-color: white;
-    color: gray;
-    border: 1px solid;
+  background-color: white;
+  color: gray;
+  border: 1px solid;
 }
 
 .s-two .container .button .but .seven p {
-    width: 6rem;
-    display: block;
-    background-color: var(--back-Color);
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    height: 45px;
-    line-height: 2.8;
-    border-radius: 6px;
-    margin-right: 10px;
-    opacity: .4;
+  width: 6rem;
+  display: block;
+  background-color: var(--back-Color);
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  height: 45px;
+  line-height: 2.8;
+  border-radius: 6px;
+  margin-right: 10px;
+  opacity: 0.4;
 }
 
 .s-two .container .button .but .seven p:last-child {
-    background-color: white;
-    color: gray;
-    border: 1px solid;
+  background-color: white;
+  color: gray;
+  border: 1px solid;
 }
 
-.s-two .container .button .but>div a:first-child:hover {
-    background-color: red;
+.s-two .container .button .but > div a:first-child:hover {
+  background-color: red;
 }
 
-.s-two .container .button .but>div a:last-child:hover {
-    color: red;
-    border-color: red;
+.s-two .container .button .but > div a:last-child:hover {
+  color: red;
+  border-color: red;
 }
 
 .s-two .container .button .but .three a:first-child:hover {
-    background-color: white;
-    color: red;
-    border-color: red;
+  background-color: white;
+  color: red;
+  border-color: red;
 }
 
 @media (max-width: 767px) {
-    .s-two .container .button .but>div {
-        display: block;
-        margin-bottom: 30px;
-    }
+  .s-two .container .button .but > div {
+    display: block;
+    margin-bottom: 30px;
+  }
 
-    .s-two .container .button .but>div a,
-    .s-two .container .button .but>div p {
-        width: 100% !important;
-        margin: 0 0 15px 0;
-    }
+  .s-two .container .button .but > div a,
+  .s-two .container .button .but > div p {
+    width: 100% !important;
+    margin: 0 0 15px 0;
+  }
 }
 
 /* End Buttons */
 /* Start Form */
 .s-two .container .form {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .s-two .container .form form .first {
-    display: flex;
-    margin-bottom: 20px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .s-two .container .form form .first input {
-    width: 50%;
-    margin-right: 5px;
-    height: 45px;
-    background-color: gainsboro;
-    border: none;
-    border-radius: 5px;
-    outline-color: #4444;
-    outline-style: auto;
-    padding-left: 15px;
-
+  width: 50%;
+  margin-right: 5px;
+  height: 45px;
+  background-color: gainsboro;
+  border: none;
+  border-radius: 5px;
+  outline-color: #4444;
+  outline-style: auto;
+  padding-left: 15px;
 }
 
 .s-two .container .form form .first input:focus,
 .s-two .container .form form .select select:focus,
 .s-two .container .form form .select select {
-    outline-color: var(--back-Color);
-    outline-width: 5px;
+  outline-color: var(--back-Color);
+  outline-width: 5px;
 }
 
 .s-two .container .form form .first input::placeholder,
 .s-two .container .form form .text textarea::placeholder {
-    opacity: 0.3;
-    font-weight: bold;
+  opacity: 0.3;
+  font-weight: bold;
 }
 
-
 .s-two .container .form form .select select {
-    width: 100%;
-    margin-right: 5px;
-    height: 45px;
-    background-color: gainsboro;
-    color: darkslategray;
-    outline-color: #4444;
-    outline-style: auto;
-    font-size: 15px;
-    border-radius: 5px;
-    padding-left: 10px;
-    margin-bottom: 20px;
+  width: 100%;
+  margin-right: 5px;
+  height: 45px;
+  background-color: gainsboro;
+  color: darkslategray;
+  outline-color: #4444;
+  outline-style: auto;
+  font-size: 15px;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-bottom: 20px;
 }
 
 .s-two .container .form form .select select option {
-    background-color: white;
-    font-size: 15px;
+  background-color: white;
+  font-size: 15px;
 }
 
 .s-two .container .form form .radio,
 .s-two .container .form form .check {
-    display: flex;
-    margin: 0 0 20px 0;
+  display: flex;
+  margin: 0 0 20px 0;
 }
 
 .s-two .container .form form .radio div,
 .s-two .container .form form .check div {
-    width: 33%;
-    align-items: center;
-    display: flex;
+  width: 33%;
+  align-items: center;
+  display: flex;
 }
 
 .s-two .container .form form .radio div label,
 .s-two .container .form form .check div label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .s-two .container .form form .radio div input,
 .s-two .container .form form .check div input {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .s-two .container .form form .radio div input::after {
-    content: "";
-    width: 94%;
-    height: 94%;
-    border-radius: 50%;
-    background-color: #4444;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    border: 1px solid #4444;
+  content: "";
+  width: 94%;
+  height: 94%;
+  border-radius: 50%;
+  background-color: #4444;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  border: 1px solid #4444;
 }
 
 .s-two .container .form form .radio div input:checked::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 30px;
-    content: "\f058";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: white;
-    color: red;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 30px;
+  content: "\f058";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  color: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
 }
 
-
 .s-two .container .form form .check div {
-    width: 50%;
+  width: 50%;
 }
 
 .s-two .container .form form .check div input:checked::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 36px;
-    content: "\f14a";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: -3px;
-    background-color: white;
-    color: red;
-    z-index: 2;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 36px;
+  content: "\f14a";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: -3px;
+  background-color: white;
+  color: red;
+  z-index: 2;
 }
 
 .s-two .container .form form .check div input::after {
-    content: "";
-    width: 94%;
-    height: 94%;
-    background-color: #4444;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    border: 1px solid #4444;
+  content: "";
+  width: 94%;
+  height: 94%;
+  background-color: #4444;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  border: 1px solid #4444;
 }
 
 .s-two .container .form form .text {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .s-two .container .form form .text textarea {
-    width: 100%;
-    margin-right: 5px;
-    height: 150px;
-    background-color: gainsboro;
-    outline: gainsboro;
-    border-radius: 3px;
-    font-family: 'Raleway', sans-serif;
-    padding-left: 15px;
-    padding-top: 10px;
+  width: 100%;
+  margin-right: 5px;
+  height: 150px;
+  background-color: gainsboro;
+  outline: gainsboro;
+  border-radius: 3px;
+  font-family: "Raleway", sans-serif;
+  padding-left: 15px;
+  padding-top: 10px;
 }
 
 .s-two .container .form form .text textarea:focus {
-    border-color: var(--back-Color);
-    border-width: 2px;
+  border-color: var(--back-Color);
+  border-width: 2px;
 }
 
-.s-two .container .form form .buttons input[type=submit] {
-    width: 25%;
-    height: 50px;
-    color: white;
-    background-color: var(--back-Color);
-    border-radius: 8px;
-    border: none;
-    margin-right: 10px;
-    cursor: pointer;
+.s-two .container .form form .buttons input[type="submit"] {
+  width: 25%;
+  height: 50px;
+  color: white;
+  background-color: var(--back-Color);
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
-.s-two .container .form form .buttons input[type=submit]:hover {
-    background-color: red;
+.s-two .container .form form .buttons input[type="submit"]:hover {
+  background-color: red;
 }
 
-.s-two .container .form form .buttons input[type=reset] {
-    width: 15%;
-    height: 50px;
-    color: gray;
-    background-color: white;
-    border: 1px solid;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
+.s-two .container .form form .buttons input[type="reset"] {
+  width: 15%;
+  height: 50px;
+  color: gray;
+  background-color: white;
+  border: 1px solid;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
-.s-two .container .form form .buttons input[type=reset]:hover {
-    border-color: var(--back-Color);
-    color: var(--back-Color);
+.s-two .container .form form .buttons input[type="reset"]:hover {
+  border-color: var(--back-Color);
+  color: var(--back-Color);
 }
 
 @media (max-width: 767px) {
+  .s-two .container .form form .first,
+  .s-two .container .form form .radio,
+  .s-two .container .form form .check {
+    flex-direction: column;
+  }
 
-    .s-two .container .form form .first,
-    .s-two .container .form form .radio,
-    .s-two .container .form form .check {
-        flex-direction: column;
-    }
+  .s-two .container .form form .first input,
+  .s-two .container .form form .radio div,
+  .s-two .container .form form .check div,
+  .s-two .container .form form .buttons input {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
 
-    .s-two .container .form form .first input,
-    .s-two .container .form form .radio div,
-    .s-two .container .form form .check div,
-    .s-two .container .form form .buttons input {
-        width: 100% !important;
-        margin-bottom: 10px;
-    }
-
-    .s-two .container .form form .buttons {
-        display: flex;
-        flex-direction: column;
-    }
+  .s-two .container .form form .buttons {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* End Form */
 /* Start Images */
 .s-two .container .images {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .s-two .container .images h4 {
-    font-weight: normal;
-    text-transform: uppercase;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
-
-.s-two .container .images .content>img {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+.s-two .container .images .content > img {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .s-two .container .images .content .imgs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
 }
 
 .s-two .container .images .content .imgs img {
-    border-radius: 5px;
-    width: 100%;
+  border-radius: 5px;
+  width: 100%;
 }
 
 /* End Images */
 /* Start Left & Right */
 
 .s-two .container .left-right p {
-    margin-bottom: 30px;
-    font-size: 16px;
-    color: gray;
-    font-weight: normal;
-    line-height: 1.4;
-    overflow: hidden;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: gray;
+  font-weight: normal;
+  line-height: 1.4;
+  overflow: hidden;
 }
 
 .s-two .container .left-right .left img {
-    float: left;
-    margin: 0 27px 27px 0;
-    max-width: 40%;
-    border-radius: 5px;
+  float: left;
+  margin: 0 27px 27px 0;
+  max-width: 40%;
+  border-radius: 5px;
 }
 
 .s-two .container .left-right .right img {
-    float: right;
-    max-width: 40%;
-    border-radius: 5px;
-    margin: 0 0 27px 27px;
+  float: right;
+  max-width: 40%;
+  border-radius: 5px;
+  margin: 0 0 27px 27px;
 }
 
 /* End Left & Right */
 /* Start Box */
 .s-two .container .box {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .s-two .container .box p {
-    line-height: 1.4;
-    font-size: 18px;
+  line-height: 1.4;
+  font-size: 18px;
 }
 
 /* End Box */
 /* Start Preformatted */
 pre {
-    padding: 20px 0;
-    background-color: rgb(68 68 68 / 20%);
-    border: 1px solid;
-    border-radius: 5px;
-    width: 100%;
+  padding: 20px 0;
+  background-color: rgb(68 68 68 / 20%);
+  border: 1px solid;
+  border-radius: 5px;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
-    pre {
-        overflow: scroll;
-    }
+  pre {
+    overflow: scroll;
+  }
 }
 
 @media (min-width: 992px) {
-    pre {
-        overflow: scroll;
-    }
+  pre {
+    overflow: scroll;
+  }
 }
 
 /* End Preformatted */
 /* End Section Two */
 /* Start Footer */
 footer {
-    background-color: black;
-    padding-top: var(--main-padding);
-    margin-top: 100px;
+  background-color: black;
+  padding-top: var(--main-padding);
+  margin-top: 100px;
 }
 
 footer .contain {
-    display: flex;
-    margin: 0 auto;
-    width: 75rem;
-    max-width: calc(100% - 6rem);
-    padding-bottom: 25px;
-    flex-wrap: wrap;
-    padding: 100px 0;
+  display: flex;
+  margin: 0 auto;
+  width: 75rem;
+  max-width: calc(100% - 6rem);
+  padding-bottom: 25px;
+  flex-wrap: wrap;
+  padding: 100px 0;
 }
 
-
-
 footer .contain .accumsan {
-    width: 40%;
-    padding-right: 65px;
+  width: 40%;
+  padding-right: 65px;
 }
 
 footer .contain .accumsan h2 {
-    font-weight: normal;
-    font-size: 20px;
-    color: white;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 footer .contain .accumsan p {
-    font-size: 15px;
-    color: var(--text-Color);
+  font-size: 15px;
+  color: var(--text-Color);
 }
 
 footer .contain .sem {
-    width: 25%;
+  width: 25%;
 }
 
 footer .contain .sem h2 {
-    font-weight: normal;
-    color: white;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin-bottom: 20px;
+  font-weight: normal;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 footer .contain .sem ul li:not(:last-child) {
-    border-bottom: 1px solid var(--text-Color);
-    padding-bottom: 9px;
+  border-bottom: 1px solid var(--text-Color);
+  padding-bottom: 9px;
 }
 
 footer .contain .sem ul li {
-    padding-top: 9px;
-    font-size: 14px;
+  padding-top: 9px;
+  font-size: 14px;
 }
 
 footer .contain .sem ul a {
-    text-decoration: none;
-    color: var(--text-Color);
+  text-decoration: none;
+  color: var(--text-Color);
 }
 
 footer .contain ul li a:hover {
-    color: var(--back-Color);
+  color: var(--back-Color);
 }
 
 footer .contain .social {
-    width: 25%;
-    padding-left: 65px;
+  width: 25%;
+  padding-left: 65px;
 }
 
 footer .contain .social h2 {
-    font-weight: normal;
-    color: white;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin-bottom: 20px;
+  font-weight: normal;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 footer .contain .sem ul,
 footer .contain .social ul {
-    list-style: none;
+  list-style: none;
 }
 
 footer .contain .social ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    padding-top: 9px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding-top: 9px;
 }
 
 footer .contain .social ul a {
-    text-decoration: none;
-    color: var(--text-Color);
+  text-decoration: none;
+  color: var(--text-Color);
 }
 
 footer .contain .social ul a i {
-    color: white;
-    padding-right: 10px;
+  color: white;
+  padding-right: 10px;
 }
 
 @media (max-width: 992px) {
-    footer .contain .accumsan {
-        width: 100%;
-        padding-bottom: 35px;
-    }
+  footer .contain .accumsan {
+    width: 100%;
+    padding-bottom: 35px;
+  }
 
-    footer .contain .sem,
-    footer .contain .social {
-        width: 50%;
-    }
+  footer .contain .sem,
+  footer .contain .social {
+    width: 50%;
+  }
 }
 
 @media (max-width: 767px) {
-    footer .contain {
-        flex-direction: column;
-    }
+  footer .contain {
+    flex-direction: column;
+  }
 
-    footer .contain .accumsan {
-        width: 100%;
-        padding: 0;
-        padding-bottom: 35px;
-    }
-
-    footer .contain .sem {
-        width: 100%;
-        padding-bottom: 35px;
-    }
-
-    footer .contain .social {
-        width: 100%;
-        padding: 0;
-    }
-}
-
-footer>p {
-    text-align: center;
-    color: gray;
-    padding: 40px;
-    position: relative;
-}
-
-footer>p::before {
-    content: "";
+  footer .contain .accumsan {
     width: 100%;
-    height: 1px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: var(--text-Color);
+    padding: 0;
+    padding-bottom: 35px;
+  }
+
+  footer .contain .sem {
+    width: 100%;
+    padding-bottom: 35px;
+  }
+
+  footer .contain .social {
+    width: 100%;
+    padding: 0;
+  }
 }
 
-footer>p span {
-    text-transform: uppercase;
-    color: var(--back-Color);
-    font-size: 16px;
-    font-weight: normal;
+footer > p {
+  text-align: center;
+  color: gray;
+  padding: 40px;
+  position: relative;
+}
+
+footer > p::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--text-Color);
+}
+
+footer > p span {
+  text-transform: uppercase;
+  color: var(--back-Color);
+  font-size: 16px;
+  font-weight: normal;
 }
 
 /* End Footer */
